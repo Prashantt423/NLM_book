@@ -1,0 +1,33 @@
+.book{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .page_current{
+        background: white;
+        width: 50vw;
+        height:70vh;
+        border-radius: 0.5rem;
+        display:flex;
+        position: relative;
+        .partition{
+            height: 100%;
+            width: 2px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background: #e4e4e4;;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &_back{
+            flex:1;
+            margin:2rem;
+        }
+        &_front{
+            flex:1;
+            margin:2rem;
+        }
+    }
+}
