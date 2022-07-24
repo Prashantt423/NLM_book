@@ -1,29 +1,15 @@
 import React from "react";
-import "./page.scss";
-
-export default function Page({ data }) {
-  // console.log(props);
+const Page = React.forwardRef((props, ref) => {
   return (
-    <>
-      {/* Book */}
-
-      <div className="book">
-        <div className="page_current">
-          <div className="partition"></div>
-          <div className="page_current_back">
-            <h1>{data?.title}</h1>
-            <br />
-            <br />
-            <h3>{data?.content}</h3>
-          </div>
-          <div className="page_current_front">
-            <h1>{data?.title}</h1>
-            <br />
-            <br />
-            <h3>{data?.content}</h3>
-          </div>
-        </div>
+    <div className="page" ref={ref}>
+      <div className="page-content">
+        <h2 className="page-header">Page header - {props.number}</h2>
+        <div className="page-image"></div>
+        <div className="page-text">{props.children}</div>
+        <div className="page-footer">{props.number + 1}</div>
       </div>
-    </>
+    </div>
   );
-}
+});
+
+export default Page;

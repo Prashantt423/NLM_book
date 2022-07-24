@@ -7,7 +7,7 @@ const persistConfig = {
 };
 
 const initial_state = {
-  page: 1,
+  // page: 1,
 };
 
 function reducer(state = initial_state, action) {

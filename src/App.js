@@ -1,9 +1,5 @@
-import "./App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
-import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
-import Page from "./components/Page/Page";
 import { connect } from "react-redux";
+import Book from "./components/Book/Book";
 
 function App(props) {
   const dummyData = [
@@ -35,30 +31,44 @@ function App(props) {
   ];
   console.log(props.page);
   return (
-    <div className="main">
-      {/* previous button */}
-      <button
-        id="prev-btn"
-        onClick={() => {
-          props.page > 1 &&
-            props.dispatch({ type: "page", value: props.page - 1 });
-        }}
-      >
-        <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-      </button>
-
-      <Page data={dummyData[props.page - 1]} />
-      {/* next button */}
-      <button
-        id="next-btn"
-        onClick={() => {
-          props.page < dummyData.length - 1 &&
-            props.dispatch({ type: "page", value: props.page + 1 });
-        }}
-      >
-        <FontAwesomeIcon icon={faArrowAltCircleRight} />
-      </button>
+    <div
+      style={{
+        // width: "50vw",
+        padding: "2rem 6rem",
+        position: "relative",
+        // display: "flex",
+        // justifyContent: "center",
+        // alignItems: "center",
+        // flexDirection: "column",
+      }}
+    >
+      <Book />
     </div>
+    // <div className="main">
+    //   {/* previous button */}
+    //   {/* <button
+    //     id="prev-btn"
+    //     onClick={() => {
+    //       props.page > 1 &&
+    //         props.dispatch({ type: "page", value: props.page - 1 });
+    //     }}
+    //   >
+    //     <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+    //   </button> */}
+
+    //   {/* <Page data={dummyData[props.page - 1]} /> */}
+
+    //   {/* next button */}
+    //   {/* <button
+    //     id="next-btn"
+    //     onClick={() => {
+    //       props.page < dummyData.length - 1 &&
+    //         props.dispatch({ type: "page", value: props.page + 1 });
+    //     }}
+    //   >
+    //     <FontAwesomeIcon icon={faArrowAltCircleRight} />
+    //   </button> */}
+    // </div>
   );
 }
 
