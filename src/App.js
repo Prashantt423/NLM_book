@@ -2,33 +2,33 @@ import { connect } from "react-redux";
 import Book from "./components/Book/Book";
 
 function App(props) {
-  const dummyData = [
-    {
-      page: 1,
-      title: "page 1",
-      content: "lorem ipsum",
-    },
-    {
-      page: 2,
-      title: "page 2",
-      content: "lorem ipsum",
-    },
-    {
-      page: 3,
-      title: "page 3",
-      content: "lorem ipsum",
-    },
-    {
-      page: 4,
-      title: "page 4",
-      content: "lorem ipsum",
-    },
-    {
-      page: 5,
-      title: "page 5",
-      content: "lorem ipsum",
-    },
-  ];
+  // const dummyData = [
+  //   {
+  //     page: 1,
+  //     title: "page 1",
+  //     content: "lorem ipsum",
+  //   },
+  //   {
+  //     page: 2,
+  //     title: "page 2",
+  //     content: "lorem ipsum",
+  //   },
+  //   {
+  //     page: 3,
+  //     title: "page 3",
+  //     content: "lorem ipsum",
+  //   },
+  //   {
+  //     page: 4,
+  //     title: "page 4",
+  //     content: "lorem ipsum",
+  //   },
+  //   {
+  //     page: 5,
+  //     title: "page 5",
+  //     content: "lorem ipsum",
+  //   },
+  // ];
   console.log(props.page);
   return (
     <div
