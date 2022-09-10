@@ -2,6 +2,7 @@ import React from "react";
 import "./book.scss";
 import Page from "../Page/Page";
 import { connect } from "react-redux";
+<<<<<<< Updated upstream
 import HTMLFlipBook from "react-pageflip";
 import PageCover from "../PageCover/PageCover";
 class Book extends React.Component {
@@ -15,34 +16,88 @@ class Book extends React.Component {
     };
   }
   onChangeOrientation = () => {};
+=======
+// import HTMLFlipBook from "react-pageflip";
+// import PageCover from "../PageCover/PageCover";
+// import phy_back from "../../assets/phy_back_cover_nlm.jpg";
+// import what_force from "../../assets/What-is-Force-and-Types-of-Forces.jpg";
+// import dummydata from "../../dummyData";
+class Book extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.book = React.createRef();
+  //   this.container = React.createRef();
+  //   console.log(props);
+  //   this.state = {
+  //     page: 0,
+  //     totalPage: 0,
+  //   };
+  // }
+  // onChangeOrientation = () => {};
+>>>>>>> Stashed changes
 
-  nextButtonClick = () => {
-    this.book.current.pageFlip().flipNext();
-  };
+  // nextButtonClick = () => {
+  //   this.book.current.pageFlip().flipNext();
+  // };
 
-  prevButtonClick = () => {
-    this.book.current.pageFlip().flipPrev();
-  };
+  // prevButtonClick = () => {
+  //   this.book.current.pageFlip().flipPrev();
+  // };
 
-  onPage = (e) => {
-    console.log(e);
-    this.setState({
-      page: e.data,
-    });
-  };
+  // onPage = (e) => {
+  //   console.log(e);
+  //   this.setState({
+  //     page: e.data,
+  //   });
+  // };
 
-  componentDidMount() {
-    // this.setState({
-    //     totalPage: this.flipBook.getPageFlip().getPageCount(),
-    //   });
-    // this.flipBook = this.book.current.pageFlip();
-    console.log(this.book.current.pageFlip);
-  }
+  
+
+  // createPageComponent() {
+  //   // After every component check if its not overflowing and if its overflowing and curr_adding==desc then  add till it doesn't overflow and transfer remaining in next page
+  //   let topic = 0;
+  //   let title = 0;
+  //   let subtopic = 0;
+  //   let topic_size = dummydata.topics.length;
+  //   let subtopic_size = dummydata.topics.subtopics.length;
+  //   return (
+  //     <Page number={1}>
+  //       <div>
+  //         {/* heading */}
+  //         <div className="style3">Newton's Law of Motion</div>
+  //         <br></br>
+  //         {/* subheading/title */}
+  //         <div class="style2"> Foundations of Newtonian Mechanics: </div>
+  //         {/* description */}
+  //         <div>
+  //           <div className="style1">(A) Mass :</div>The quantity of matter is
+  //           the measure of the same arising from it's density and bulk
+  //           conjointly. <br></br>
+  //           <br></br>
+  //         </div>
+  //       </div>
+  //     </Page>
+  //   );
+  // }
+
+  // componentDidMount() {
+  //   console.log(dummydata);
+  //   // this.setState({
+  //   //     totalPage: this.flipBook.getPageFlip().getPageCount(),
+  //   //   });
+  //   // this.flipBook = this.book.current.pageFlip();
+  //   console.log(this.book.current.pageFlip);
+  // }
 
   render() {
     return (
+<<<<<<< Updated upstream
       <div>
         <HTMLFlipBook
+=======
+      <div >
+        {/* <HTMLFlipBook
+>>>>>>> Stashed changes
           width={550}
           height={600}
           size="stretch"
@@ -62,7 +117,19 @@ class Book extends React.Component {
           ref={this.book}
           style={{ background: "white" }}
         >
+<<<<<<< Updated upstream
           <PageCover>BOOK TITLE</PageCover>
+=======
+          <PageCover>
+            <div>
+              NEWTON'S LAWS OF MOTION
+              <center>
+                <img src={phy_back} id="cover" alt="cover" />
+              </center>
+            </div>
+          </PageCover>
+
+>>>>>>> Stashed changes
           <Page number={1}>
             quibusdam commodi. Culpa sunt earum inventore? Placeat inventore
             maiores perspiciatis amet saepe ipsam fugit mollitia magni iure
@@ -101,11 +168,43 @@ class Book extends React.Component {
             architecto quia hic eaque! Maxime provident odit iusto consequatur
             perferendis optio laboriosam.
           </Page>
+<<<<<<< Updated upstream
           <Page number={2}>Lorem ipsum...</Page>
           <PageCover>THE END</PageCover>
         </HTMLFlipBook>
 
         <div className="container">
+=======
+          <Page number={2}>
+            <div>
+              <div class="style2">Newton's laws of motion</div>
+              <br></br>
+              <br></br>
+              <div className="style1">First Law :</div>Every body continues in
+              it's state of rest or of uniform rectilinear motion except if it
+              is compelled by forces acting on it to change that state.
+              <br></br>
+              <br></br>
+              <div className="style1">Second Law :</div>The change of motion is
+              proportional to the applied force and takes place in the direction
+              of the straight line along which that force acts.
+              <br></br>
+              <br></br>
+              <div className="style1">Third Law :</div>To every action there is
+              always an equal and contrary reaction; or the mutual actions of
+              any two bodies are always equal and oppositely directed along the
+              same straight line.
+            </div>
+          </Page>
+          <PageCover>
+            <div>THE END</div>
+          </PageCover>
+        </HTMLFlipBook> */}
+        <Page />
+        {/* <Page />
+        <Page /> */}
+        {/* <div className="container">
+>>>>>>> Stashed changes
           <div className="button">
             <button
               type="button__prev"
@@ -132,7 +231,7 @@ class Book extends React.Component {
               Next page
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

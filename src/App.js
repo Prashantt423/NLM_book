@@ -1,6 +1,6 @@
-import { connect } from "react-redux";
-import Book from "./components/Book/Book";
-
+import { connect } from 'react-redux';
+import Book from './components/Book/Book';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App(props) {
   // const dummyData = [
   //   {
@@ -34,8 +34,8 @@ function App(props) {
     <div
       style={{
         // width: "50vw",
-        padding: "2rem 6rem",
-        position: "relative",
+        padding: '2rem 6rem',
+        position: 'relative',
         // display: "flex",
         // justifyContent: "center",
         // alignItems: "center",

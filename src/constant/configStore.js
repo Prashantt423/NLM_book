@@ -6,14 +6,13 @@ const persistConfig = {
   storage,
 };
 
-const initial_state = {
-  // page: 1,
-};
+const initial_state = {};
 
 function reducer(state = initial_state, action) {
   switch (action.type) {
     case "page":
       return { ...state, page: action.value };
+
     default:
       return state;
   }
