@@ -113,9 +113,9 @@ class Book extends React.Component {
           onFlip={this.onPage}
           onChangeOrientation={this.onChangeOrientation}
           onChangeState={this.onChangeState}
+          useMouseEvents={false}
           className="demo-book"
           ref={this.book}
-          style={{ background: "white" }}
         >
 <<<<<<< Updated upstream
           <PageCover>BOOK TITLE</PageCover>
